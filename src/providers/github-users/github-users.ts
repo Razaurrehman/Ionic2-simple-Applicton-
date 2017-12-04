@@ -26,4 +26,16 @@ export class GithubUsersProvider {
       .map(res => <User[]>res);
   }
 
+  // Get github user by providing login(username)
+  loadDetails(login: string): Observable<User> {
+    return this.http.get(`${this.githubApiUrl}/users/${login}`)
+      .map(res => <User>(res));
+  }
+
+  // Search for github users
+  searchUsers(searchParam: string): Observable<User[]> {
+    return this.http.get(`${this.githubApiUrl}/search/users?q=${searchParam}`)
+      .map(res => <User[]>(res.items));
+  }
+
 }

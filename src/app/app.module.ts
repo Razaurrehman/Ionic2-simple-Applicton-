@@ -7,17 +7,20 @@ import { MyApp } from './app.component';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
+import {UserDetailsPage} from "../pages/user-details/user-details";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GithubUsersProvider } from '../providers/github-users/github-users';
+
 
 @NgModule({
   declarations: [
     MyApp,
     UsersPage,
     ReposPage,
-    OrganisationsPage
+    OrganisationsPage,
+    UserDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { GithubUsersProvider } from '../providers/github-users/github-users';
     MyApp,
     UsersPage,
     ReposPage,
-    OrganisationsPage
+    OrganisationsPage,
+      UserDetailsPage
   ],
   providers: [
     StatusBar,
